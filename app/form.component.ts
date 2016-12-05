@@ -22,7 +22,8 @@ this.myForm.value.email,
 this.myForm.value.password,
 this.myForm.value.firstName,
 this.myForm.value.lastName,
-this.myForm.value.mobile
+this.myForm.value.mobile,
+this.myForm.value.ssn
         ) 
         if(this.myForm.valid)
         {
@@ -50,7 +51,10 @@ Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]
          ]),
          password : new FormControl(null,Validators.required),
           mobile : new FormControl(null,[
-Validators.required ,  Validators.pattern("[0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]")
+Validators.required ,  Validators.pattern("([0-9][0-9][0-9]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9])|([0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9])")
+ ]),
+   ssn : new FormControl(null,[
+Validators.required ,  Validators.pattern("([0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9])")
  ]),
       })
       
