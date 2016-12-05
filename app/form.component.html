@@ -33,6 +33,16 @@
     </div>
    
         </div>
+
+   <div class="form-group">
+          <label for="ssn">SSN(Match Pattern XXX-XX-XXXX)</label>
+          <input type="text" id="ssn" class="form-control" formControlName="ssn" placeholder="Socal Security Number">
+          <div style="color:#FF0000" *ngIf="!myForm.controls.ssn.valid && submitted ">
+       *SSN Not valid .
+    </div>
+   
+        </div>
+
         <div class="form-group">
           <label for="password">Password</label>
           <input  type="password" id="password" class="form-control" formControlName="password">
